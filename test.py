@@ -1,1 +1,1 @@
-print("hello world fuck")
+THIS SHOULD BE A LINTER ERRORprint("hello world fuck")
