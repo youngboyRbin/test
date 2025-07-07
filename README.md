@@ -5,7 +5,7 @@ A simple Python project demonstrating basic console output functionality.
 ## Quick Start
 
 ```bash
-python test.py
+python3 test.py
 ```
 
 ## Documentation
@@ -36,12 +36,12 @@ For comprehensive API documentation, usage examples, and development guidelines,
 
 1. Ensure Python is installed:
    ```bash
-   python --version
+   python3 --version
    ```
 
 2. Run the application:
    ```bash
-   python test.py
+   python3 test.py
    ```
 
 ## Documentation Sections

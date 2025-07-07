@@ -47,7 +47,7 @@ cd <project-directory>
 To execute the main application:
 
 ```bash
-python test.py
+python3 test.py
 ```
 
 **Expected Output:**
@@ -63,19 +63,33 @@ hello world fuck
 
 **Description:** Main application entry point that demonstrates basic console output functionality.
 
-**Public Interface:** None (currently script-based execution)
+**Public Interface:** 
+- `main()` - Primary application entry point function
 
 **Functions:** 
-- **Implicit Main Execution**
-  - **Description:** Outputs a greeting message to the console
-  - **Parameters:** None
-  - **Returns:** None
-  - **Side Effects:** Prints message to stdout
-  - **Example:**
-    ```python
-    # Executed automatically when script is run
-    print("hello world fuck")
-    ```
+
+##### `main()`
+- **Description:** Main function that executes the primary application logic
+- **Parameters:** None
+- **Returns:** None
+- **Side Effects:** Prints a greeting message to stdout
+- **Type Signature:** `() -> None`
+- **Example:**
+  ```python
+  from test import main
+  main()  # Outputs: hello world fuck
+  ```
+
+##### Module Execution
+- **Description:** Script entry point when executed directly
+- **Parameters:** None
+- **Returns:** None
+- **Side Effects:** Calls main() function
+- **Example:**
+  ```python
+  # Direct execution
+  python test.py
+  ```
 
 ### Module Dependencies
 
@@ -85,34 +99,38 @@ Currently, the project has no external dependencies and uses only Python standar
 
 ### Basic Usage Example
 
-```python
+```bash
 # Run the script directly
-python test.py
+python3 test.py
 ```
 
 ### Integration Example
 
-If you want to import and use this as a module (future enhancement):
+Import and use as a module:
 
 ```python
-# Future implementation example
+# Import the module
 import test
 
-# This would require refactoring the current script
-test.main()  # Hypothetical function call
+# Call the main function
+test.main()  # Outputs: hello world fuck
+
+# Alternative import style
+from test import main
+main()  # Outputs: hello world fuck
 ```
 
 ### Command Line Usage
 
 ```bash
 # Direct execution
-python test.py
+python3 test.py
 
 # With output redirection
-python test.py > output.txt
+python3 test.py > output.txt
 
 # Silent execution (suppress output)
-python test.py > /dev/null 2>&1
+python3 test.py > /dev/null 2>&1
 ```
 
 ## Development Guidelines
@@ -226,7 +244,7 @@ loguru>=0.6.0          # Advanced logging
 ### Common Issues
 
 **Issue:** Script doesn't run
-- **Solution:** Ensure Python 3.6+ is installed and accessible via `python` command
+- **Solution:** Ensure Python 3.6+ is installed and accessible via `python3` command
 
 **Issue:** Permission denied
 - **Solution:** Make the script executable: `chmod +x test.py`
